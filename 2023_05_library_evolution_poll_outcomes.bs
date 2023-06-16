@@ -1,0 +1,239 @@
+<pre class='metadata'>
+Title: 2023-05 Library Evolution Poll Outcomes
+Shortname: D2776
+Revision: 0
+Status: D
+Group: WG21
+Audience: WG21
+Editor: Bryce Adelstein Lelbach (he/him/his) — Library Evolution Chair, NVIDIA, brycelelbach@gmail.com
+Editor: Fabio Fracassi — Library Evolution Vice Chair, CODE University of Applied Sciences, f.fracassi@gmx.net
+Editor: Ben Craig — Library Evolution Vice Chair, NI, ben.craig@gmail.com
+Editor: Inbal Levi — Ranges Chair (SG9) and Library Mailing List Review Manager, sinbal2l@gmail.com
+URL: https://wg21.link/P2776
+!Source: <a href="https://github.com/brycelelbach/wg21_p2776_2023_05_library_evolution_poll_outcomes/blob/main/2023_05_library_evolution_poll_outcomes.bs">GitHub</a>
+Issue Tracking: GitHub https://github.com/brycelelbach/wg21_p2776_2023_05_library_evolution_poll_outcomes/issues
+Metadata Order: Editor, This Version, Source, Issue Tracking, Project, Audience
+Markup Shorthands: markdown yes
+Toggle Diffs: no
+No Abstract: yes
+Boilerplate: style-syntax-highlighting off
+Default Biblio Display: direct
+</pre>
+
+<style>
+table, th, tr, td {
+  border: 2px solid black !important;
+}
+@media (prefers-color-scheme: dark) {
+  table, th, tr, td {
+    border: 2px solid white !important;
+  }
+}
+</style>
+
+# Introduction # {#introduction}
+
+In 2023-05, the C++ Library Evolution group conducted a series of
+  electronic decision polls [[P2650R0]].
+This paper provides the results of those polls and summarizes the results.
+
+In total, 25 people participated in the polls.
+Some participants opted to not vote on some polls.
+Thank you to everyone who participated, and to the proposal authors for all
+  their hard work!
+
+# Poll Outcomes # {#poll-outcomes}
+
+* SF: Strongly Favor.
+* WF: Weakly Favor.
+* N: Neutral.
+* WA: Weakly Against.
+* SA: Strongly Against.
+
+<table>
+<tr>
+<th>Poll
+<th>SF
+<th>WF
+<th>N
+<th>WA
+<th>SA
+<th>Outcome
+
+<tr>
+<td>
+Poll 1: Send [[P1673R12]] BLAS Linear Algebra to Library Working Group for C++26.
+<td>5
+<td>9
+<td>2
+<td>1
+<td>1
+<td>Consensus in favor.
+
+<tr>
+<td>
+Poll 2: Send [[P2630R3]] `submdspan` to Library Working Group for C++26.
+<td>10
+<td>4
+<td>1
+<td>0
+<td>1
+<td>Consensus in favor.
+
+<tr>
+<td>
+Poll 3: Send [[P1383R1]] More `constexpr` For `<cmath>` And `<complex>` to Library Working Group for C++26.
+<td>11
+<td>9
+<td>1
+<td>0
+<td>0
+<td>Strong consensus in favor.
+
+<tr>
+<td>
+Poll 4: Send [[P2546R3]] Debugging Support to Library Working Group for C++26.
+<td>13
+<td>7
+<td>0
+<td>0
+<td>1
+<td>Consensus in favor.
+
+<tr>
+<td>
+Poll 5: Send [[P2548R5]] `copyable_function` to Library Working Group for C++26.
+<td>11
+<td>8
+<td>2
+<td>1
+<td>0
+<td>Consensus in favor.
+
+<tr>
+<td>
+Poll 6: Send [[P2714R0]] Bind Front And Back To NTTP Callables to Library Working Group for C++26.
+<td>4
+<td>7
+<td>4
+<td>1
+<td>0
+<td>Consensus in favor.
+
+<tr>
+<td>
+Poll 7: Send [[P2637R2]] Member `visit` to Library Working Group for C++26.
+<td>13
+<td>6
+<td>0
+<td>2
+<td>1
+<td>Consensus in favor.
+
+<tr>
+<td>
+Poll 8: Send [[P2757R2]] Type-Checking Format Args to Library Working Group for C++26.
+<td>15
+<td>4
+<td>1
+<td>0
+<td>0
+<td>Strong consensus in favor.
+
+<tr>
+<td>
+Poll 9: Send [[P2641R3]] Checking If A Union Alternative Is Active to Library Working Group for C++26.
+<td>5
+<td>12
+<td>1
+<td>0
+<td>0
+<td>Strong consensus in favor.
+
+<tr>
+<td>
+Poll 10: Send [[P1759R6]] Native Handles And File Streams to Library Working Group for C++26.
+<td>10
+<td>9
+<td>0
+<td>0
+<td>0
+<td>Strong consensus in favor.
+
+<tr>
+<td>
+Poll 11: Send [[P2697R0]] Interfacing `bitset` With `string_view` to Library Working Group for C++26.
+<td>8
+<td>8
+<td>1
+<td>0
+<td>1
+<td>Consensus in favor.
+
+<tr>
+<td>
+Poll 12: Send [[P2248R7]] Enabling List-Initialization For Algorithms to Library Working Group for C++26.
+<td>7
+<td>9
+<td>4
+<td>0
+<td>0
+<td>Strong consensus in favor.
+
+<tr>
+<td>
+Poll 13: Send [[P2734R0]] Adding The New 2022 SI Prefixes to Library Working Group for C++26.
+<td>9
+<td>10
+<td>2
+<td>0
+<td>0
+<td>Strong consensus in favor.
+
+</table>
+
+<pre class=biblio>
+{
+  "P2548R5": {
+    "title": "copyable_function",
+    "authors": [
+      "Michael Florian Hava"
+    ],
+    "href": "https://wg21.link/P2548R5",
+    "date": "2023-04-03"
+  },
+  "P2637R2": {
+    "title": "Member visit",
+    "authors": [
+      "Barry Revzin"
+    ],
+    "href": "https://wg21.link/P2637R2",
+    "date": "2023-04-16"
+  },
+  "P2757R2": {
+    "title": "Type-Checking Format Args",
+    "authors": [
+      "Barry Revzin"
+    ],
+    "href": "https://wg21.link/P2757R2",
+    "date": "2023-05-15"
+  },
+  "P2641R3": {
+    "title": "Checking If A Union Alternative Is Active",
+    "authors": [
+      "Barry Revzin"
+    ],
+    "href": "https://wg21.link/P2641R3",
+    "date": "2023-05-15"
+  },
+  "P1759R6": {
+    "title": "Native Handles And File Streams",
+    "authors": [
+      "Elias Kosunen"
+    ],
+    "href": "https://wg21.link/P1759R6",
+    "date": "2023-05-15"
+  }
+}
+</pre>
+
