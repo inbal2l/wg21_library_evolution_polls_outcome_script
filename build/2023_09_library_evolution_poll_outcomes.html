@@ -2,7 +2,7 @@
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <title>P2776R0: 2023-05 Library Evolution Poll Outcomes</title>
+  <title>P3020R0: 2023-09 Library Evolution Poll Outcomes</title>
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
  *
@@ -1238,14 +1238,15 @@ Possible extra rowspan handling
 			grid-column: 2;
 			width: auto;
 			margin-right: 1rem;
+			border-bottom: 3px solid transparent;
+			margin-bottom: -3px;
 		}
 		#toc .content:hover,
 		#toc .content:focus {
 			background: rgba(75%, 75%, 75%, .25);
 			background: var(--a-hover-bg);
-			border-bottom: 3px solid #054572;
-			border-bottom: 3px solid var(--toclink-underline);
-			margin-bottom: -3px;
+			border-bottom-color: #054572;
+			border-bottom-color: var(--toclink-underline);
 		}
 		#toc li li li .content {
 			margin-left: 1rem;
@@ -1560,22 +1561,10 @@ Possible extra rowspan handling
     blockquote c-[vi] { color: inherit; } /* Name.Variable.Instance */
     blockquote c-[il] { color: inherit; } /* Literal.Number.Integer.Long */
   </style>
-  <meta content="Bikeshed version 1f1661843, updated Wed Dec 15 11:50:57 2021 -0800" name="generator">
-  <link href="https://wg21.link/P2776" rel="canonical">
+  <meta content="Bikeshed version 82ce88815, updated Thu Sep 7 16:33:55 2023 -0700" name="generator">
+  <link href="https://wg21.link/P3020" rel="canonical">
   <link href="https://isocpp.org/favicon.ico" rel="icon">
-  <meta content="4cb40f350b786be395cc44685bff2e020a28b3d1" name="document-revision">
-<style>
-table, th, tr, td {
-  border: 2px solid black !important;
-}
-@media (prefers-color-scheme: dark) {
-  table, th, tr, td {
-    border: 2px solid white !important;
-  }
-}
-</style>
-<style>/* style-autolinks */
-
+<style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
     font-size: inherit;
@@ -1635,8 +1624,17 @@ pre .property::before, pre .property::after {
 
 [data-link-type=biblio] {
     white-space: pre;
-}</style>
-<style>/* style-colors */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --selflink-text: black;
+        --selflink-bg: silver;
+        --selflink-hover-text: white;
+    }
+}
+</style>
+<style>/* Boilerplate: style-colors */
 
 /* Any --*-text not paired with a --*-bg is assumed to have a transparent bg */
 :root {
@@ -1744,109 +1742,7 @@ pre .property::before, pre .property::after {
     --outdated-shadow: red;
 
     --editedrec-bg: darkorange;
-}</style>
-<style>/* style-counters */
-
-body {
-    counter-reset: example figure issue;
 }
-.issue {
-    counter-increment: issue;
-}
-.issue:not(.no-marker)::before {
-    content: "Issue " counter(issue);
-}
-
-.example {
-    counter-increment: example;
-}
-.example:not(.no-marker)::before {
-    content: "Example " counter(example);
-}
-.invalid.example:not(.no-marker)::before,
-.illegal.example:not(.no-marker)::before {
-    content: "Invalid Example" counter(example);
-}
-
-figcaption {
-    counter-increment: figure;
-}
-figcaption:not(.no-marker)::before {
-    content: "Figure " counter(figure) " ";
-}</style>
-<style>/* style-issues */
-
-a[href].issue-return {
-    float: right;
-    float: inline-end;
-    color: var(--issueheading-text);
-    font-weight: bold;
-    text-decoration: none;
-}
-</style>
-<style>/* style-md-lists */
-
-/* This is a weird hack for me not yet following the commonmark spec
-   regarding paragraph and lists. */
-[data-md] > :first-child {
-    margin-top: 0;
-}
-[data-md] > :last-child {
-    margin-bottom: 0;
-}</style>
-<style>/* style-selflinks */
-
-:root {
-    --selflink-text: white;
-    --selflink-bg: gray;
-    --selflink-hover-text: black;
-}
-.heading, .issue, .note, .example, li, dt {
-    position: relative;
-}
-a.self-link {
-    position: absolute;
-    top: 0;
-    left: calc(-1 * (3.5rem - 26px));
-    width: calc(3.5rem - 26px);
-    height: 2em;
-    text-align: center;
-    border: none;
-    transition: opacity .2s;
-    opacity: .5;
-}
-a.self-link:hover {
-    opacity: 1;
-}
-.heading > a.self-link {
-    font-size: 83%;
-}
-li > a.self-link {
-    left: calc(-1 * (3.5rem - 26px) - 2em);
-}
-dfn > a.self-link {
-    top: auto;
-    left: auto;
-    opacity: 0;
-    width: 1.5em;
-    height: 1.5em;
-    background: var(--selflink-bg);
-    color: var(--selflink-text);
-    font-style: normal;
-    transition: opacity .2s, background-color .2s, color .2s;
-}
-dfn:hover > a.self-link {
-    opacity: 1;
-}
-dfn > a.self-link:hover {
-    color: var(--selflink-hover-text);
-}
-
-a.self-link::before            { content: "¶"; }
-.heading > a.self-link::before { content: "§"; }
-dfn > a.self-link::before      { content: "#"; }
-</style>
-<style>/* style-darkmode */
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -1959,95 +1855,133 @@ dfn > a.self-link::before      { content: "#"; }
        which is quite common in practice... */
     img { background: white; }
 }
-@media (prefers-color-scheme: dark) {
-    :root {
-        --selflink-text: black;
-        --selflink-bg: silver;
-        --selflink-hover-text: white;
-    }
+</style>
+<style>/* Boilerplate: style-counters */
+body {
+    counter-reset: example figure issue;
+}
+.issue {
+    counter-increment: issue;
+}
+.issue:not(.no-marker)::before {
+    content: "Issue " counter(issue);
 }
 
-@media (prefers-color-scheme: dark) {
-    .highlight:not(.idl) { background: rgba(255, 255, 255, .05); }
-
-    c-[a] { color: #d33682 } /* Keyword.Declaration */
-    c-[b] { color: #d33682 } /* Keyword.Type */
-    c-[c] { color: #2aa198 } /* Comment */
-    c-[d] { color: #2aa198 } /* Comment.Multiline */
-    c-[e] { color: #268bd2 } /* Name.Attribute */
-    c-[f] { color: #b58900 } /* Name.Tag */
-    c-[g] { color: #cb4b16 } /* Name.Variable */
-    c-[k] { color: #d33682 } /* Keyword */
-    c-[l] { color: #657b83 } /* Literal */
-    c-[m] { color: #657b83 } /* Literal.Number */
-    c-[n] { color: #268bd2 } /* Name */
-    c-[o] { color: #657b83 } /* Operator */
-    c-[p] { color: #657b83 } /* Punctuation */
-    c-[s] { color: #6c71c4 } /* Literal.String */
-    c-[t] { color: #6c71c4 } /* Literal.String.Single */
-    c-[u] { color: #6c71c4 } /* Literal.String.Double */
-    c-[ch] { color: #2aa198 } /* Comment.Hashbang */
-    c-[cp] { color: #2aa198 } /* Comment.Preproc */
-    c-[cpf] { color: #2aa198 } /* Comment.PreprocFile */
-    c-[c1] { color: #2aa198 } /* Comment.Single */
-    c-[cs] { color: #2aa198 } /* Comment.Special */
-    c-[kc] { color: #d33682 } /* Keyword.Constant */
-    c-[kn] { color: #d33682 } /* Keyword.Namespace */
-    c-[kp] { color: #d33682 } /* Keyword.Pseudo */
-    c-[kr] { color: #d33682 } /* Keyword.Reserved */
-    c-[ld] { color: #657b83 } /* Literal.Date */
-    c-[nc] { color: #268bd2 } /* Name.Class */
-    c-[no] { color: #268bd2 } /* Name.Constant */
-    c-[nd] { color: #268bd2 } /* Name.Decorator */
-    c-[ni] { color: #268bd2 } /* Name.Entity */
-    c-[ne] { color: #268bd2 } /* Name.Exception */
-    c-[nf] { color: #268bd2 } /* Name.Function */
-    c-[nl] { color: #268bd2 } /* Name.Label */
-    c-[nn] { color: #268bd2 } /* Name.Namespace */
-    c-[py] { color: #268bd2 } /* Name.Property */
-    c-[ow] { color: #657b83 } /* Operator.Word */
-    c-[mb] { color: #657b83 } /* Literal.Number.Bin */
-    c-[mf] { color: #657b83 } /* Literal.Number.Float */
-    c-[mh] { color: #657b83 } /* Literal.Number.Hex */
-    c-[mi] { color: #657b83 } /* Literal.Number.Integer */
-    c-[mo] { color: #657b83 } /* Literal.Number.Oct */
-    c-[sa] { color: #6c71c4 } /* Literal.String.Affix */
-    c-[sb] { color: #6c71c4 } /* Literal.String.Backtick */
-    c-[sc] { color: #6c71c4 } /* Literal.String.Char */
-    c-[dl] { color: #6c71c4 } /* Literal.String.Delimiter */
-    c-[sd] { color: #6c71c4 } /* Literal.String.Doc */
-    c-[se] { color: #6c71c4 } /* Literal.String.Escape */
-    c-[sh] { color: #6c71c4 } /* Literal.String.Heredoc */
-    c-[si] { color: #6c71c4 } /* Literal.String.Interpol */
-    c-[sx] { color: #6c71c4 } /* Literal.String.Other */
-    c-[sr] { color: #6c71c4 } /* Literal.String.Regex */
-    c-[ss] { color: #6c71c4 } /* Literal.String.Symbol */
-    c-[fm] { color: #268bd2 } /* Name.Function.Magic */
-    c-[vc] { color: #cb4b16 } /* Name.Variable.Class */
-    c-[vg] { color: #cb4b16 } /* Name.Variable.Global */
-    c-[vi] { color: #cb4b16 } /* Name.Variable.Instance */
-    c-[vm] { color: #cb4b16 } /* Name.Variable.Magic */
-    c-[il] { color: #657b83 } /* Literal.Number.Integer.Long */
+.example {
+    counter-increment: example;
 }
+.example:not(.no-marker)::before {
+    content: "Example " counter(example);
+}
+.invalid.example:not(.no-marker)::before,
+.illegal.example:not(.no-marker)::before {
+    content: "Invalid Example" counter(example);
+}
+
+figcaption {
+    counter-increment: figure;
+}
+figcaption:not(.no-marker)::before {
+    content: "Figure " counter(figure) " ";
+}
+</style>
+<style>/* Boilerplate: style-issues */
+a[href].issue-return {
+    float: right;
+    float: inline-end;
+    color: var(--issueheading-text);
+    font-weight: bold;
+    text-decoration: none;
+}
+</style>
+<style>/* Boilerplate: style-md-lists */
+/* This is a weird hack for me not yet following the commonmark spec
+   regarding paragraph and lists. */
+[data-md] > :first-child {
+    margin-top: 0;
+}
+[data-md] > :last-child {
+    margin-bottom: 0;
+}
+</style>
+<style>/* Boilerplate: style-selflinks */
+
+:root {
+    --selflink-text: white;
+    --selflink-bg: gray;
+    --selflink-hover-text: black;
+}
+.heading, .issue, .note, .example, li, dt {
+    position: relative;
+}
+a.self-link {
+    position: absolute;
+    top: 0;
+    left: calc(-1 * (3.5rem - 26px));
+    width: calc(3.5rem - 26px);
+    height: 2em;
+    text-align: center;
+    border: none;
+    transition: opacity .2s;
+    opacity: .5;
+}
+a.self-link:hover {
+    opacity: 1;
+}
+.heading > a.self-link {
+    font-size: 83%;
+}
+.example > a.self-link,
+.note > a.self-link,
+.issue > a.self-link {
+    /* These blocks are overflow:auto, so positioning outside
+       doesn't work. */
+    left: auto;
+    right: 0;
+}
+li > a.self-link {
+    left: calc(-1 * (3.5rem - 26px) - 2em);
+}
+dfn > a.self-link {
+    top: auto;
+    left: auto;
+    opacity: 0;
+    width: 1.5em;
+    height: 1.5em;
+    background: var(--selflink-bg);
+    color: var(--selflink-text);
+    font-style: normal;
+    transition: opacity .2s, background-color .2s, color .2s;
+}
+dfn:hover > a.self-link {
+    opacity: 1;
+}
+dfn > a.self-link:hover {
+    color: var(--selflink-hover-text);
+}
+
+a.self-link::before            { content: "¶"; }
+.heading > a.self-link::before { content: "§"; }
+dfn > a.self-link::before      { content: "#"; }
 </style>
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">P2776R0<br>2023-05 Library Evolution Poll Outcomes</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Published Proposal, <time class="dt-updated" datetime="2023-06-16">2023-06-16</time></span></h2>
+   <h1 class="p-name no-ref" id="title">P3020R0<br>2023-09 Library Evolution Poll Outcomes</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Published Proposal, <time class="dt-updated" datetime="2023-10-15">2023-10-15</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt class="editor">Authors:
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:brycelelbach@gmail.com">Bryce Adelstein Lelbach (he/him/his) — Library Evolution Chair</a> (<span class="p-org org">NVIDIA</span>)
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:f.fracassi@gmx.net">Fabio Fracassi — Library Evolution Vice Chair</a> (<span class="p-org org">CODE University of Applied Sciences</span>)
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:ben.craig@gmail.com">Ben Craig — Library Evolution Vice Chair</a> (<span class="p-org org">NI</span>)
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:sinbal2l@gmail.com">Inbal Levi — Ranges Chair (SG9) and Library Mailing List Review Manager</a>
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:sinbal2l@gmail.com">Inbal Levi - Library Evolution Chair</a> (<span class="p-org org">MPGC Services LTD</span>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:fabio@fracassi.de">Fabio Fracassi - Library Evolution Assistant Chair</a> (<span class="p-org org">CODE University of Applied Sciences</span>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:ben.craig@gmail.com">Ben Craig - Library Evolution Assistant Chair</a> (<span class="p-org org">Raven</span>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:billy.baker.cpp@gmail.com">Billy Baker - Library Evolution Incubator Chair</a> (<span class="p-org org">NVIDIA</span>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:nevin@cplusplusguy.com">Nevin Liber - Library Evolution Incubator Assistant Chair and Admin Chair</a> (<span class="p-org org">Argonne National Laboratory</span>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:corentin.jabot@gmail.com">Corentin Jabot - Library Mailing List Review Manager</a>
      <dt>Source:
-     <dd><a href="https://github.com/brycelelbach/wg21_p2776_2023_05_library_evolution_poll_outcomes/blob/main/2023_05_library_evolution_poll_outcomes.bs">GitHub</a>
-     <dt>Issue Tracking:
-     <dd><a href="https://github.com/brycelelbach/wg21_p2776_2023_05_library_evolution_poll_outcomes/issues">GitHub</a>
+     <dd><a href="https://github.com/inbal2l/wg21_library_evolution_polls_outcome_script/blob/main/2023_09_library_evolution_poll_outcomes.bs">GitHub</a>
      <dt>Project:
-     <dd>ISO/IEC JTC1/SC22/WG21 14882: Programming Language — C++
+     <dd>ISO/IEC 14882 Programming Languages — C++, ISO/IEC JTC1/SC22/WG21
      <dt>Audience:
      <dd>WG21
     </dl>
@@ -2061,6 +1995,25 @@ dfn > a.self-link::before      { content: "#"; }
     <li><a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
     <li><a href="#poll-outcomes"><span class="secno">2</span> <span class="content">Poll Outcomes</span></a>
     <li>
+     <a href="#poll-comments"><span class="secno">3</span> <span class="content">Selected Poll Comments</span></a>
+     <ol class="toc">
+      <li><a href="#poll-1-send-p0843r9-inplace_vector-to-library-working-group-for-c26"><span class="secno">3.1</span> <span class="content">Poll 1: Send "<span title="inplace_vector">[P0843R9]</span> <code class="highlight"><c- n>inplace_vector</c-></code>" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-2-send-p1068r9-vector-api-for-random-number-generation-to-library-working-group-for-c26"><span class="secno">3.2</span> <span class="content">Poll 2: Send "<span title="Vector API for random number generation">[P1068R9]</span> Vector API for random number generation" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-3-send-p2447r4-stdspan-over-an-initializer-list-to-library-working-group-for-c26"><span class="secno">3.3</span> <span class="content">Poll 3: Send "<span title="std::span over an initializer list">[P2447R4]</span> <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>span</c-></code> over an initializer list" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-4-send-p2591r4-concatenation-of-strings-and-string-views-to-library-working-group-for-c26"><span class="secno">3.4</span> <span class="content">Poll 4: Send "<span title="Concatenation of strings and string views">[P2591R4]</span> Concatenation of strings and string views" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-5-send-p2819r1-add-tuple-protocol-to-complex-to-library-working-group-for-c26"><span class="secno">3.5</span> <span class="content">Poll 5: Send "<span title="Add tuple protocol to complex">[P2819R1]</span> Add tuple protocol to complex" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-6-send-p2821r4-spanat-to-library-working-group-for-c26"><span class="secno">3.6</span> <span class="content">Poll 6: Send "<span title="span.at()">[P2821R4]</span> <code class="highlight"><c- n>span</c-><c- p>.</c-><c- n>at</c-><c- p>()</c-></code>" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-7-send-p2833r1-freestanding-library-inout-expected-span-to-library-working-group-for-c26"><span class="secno">3.7</span> <span class="content">Poll 7: Send "<span title="Freestanding Library: inout expected span">[P2833R1]</span> Freestanding Library: inout expected span" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-8-send-p2836r1-stdbasic_const_iterator-should-follow-its-underlying-types-convertibility-to-library-working-group-for-c26-and-as-a-dr-for-c23"><span class="secno">3.8</span> <span class="content">Poll 8: Send "<span title="std::basic_const_iterator should follow its underlying type&apos;s convertibility">[P2836R1]</span> <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>basic_const_iterator</c-></code> should follow its underlying type’s convertibility" to Library Working Group for C++26 and as a DR for C++23.</span></a>
+      <li><a href="#poll-9-send-p2868r1-remove-deprecated-stdallocator-typedef-from-c26-to-library-working-group-for-c26"><span class="secno">3.9</span> <span class="content">Poll 9: Send "<span title="Remove Deprecated `std::allocator` Typedef From C++26">[P2868R1]</span> Remove Deprecated <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>allocator</c-></code> Typedef From C++26" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-10-send-p2870r1-remove-basic_stringreserve-from-c26-to-library-working-group-for-c26"><span class="secno">3.10</span> <span class="content">Poll 10: Send "<span title="Remove `basic_string::reserve()` From C++26">[P2870R1]</span> Remove <code class="highlight"><c- n>basic_string</c-><c- o>::</c-><c- n>reserve</c-><c- p>()</c-></code> From C++26" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-11-send-p2871r2-remove-deprecated-unicode-conversion-facets-from-c26-to-library-working-group-for-c2"><span class="secno">3.11</span> <span class="content">Poll 11: Send "<span title="Remove Deprecated Unicode Conversion Facets From C++26">[P2871R2]</span> Remove Deprecated Unicode Conversion Facets From C++26" to Library Working Group for C++2</span></a>
+      <li><a href="#poll-12-send-p2905r2-runtime-format-strings-to-library-working-group-for-c26-and-as-a-dr-for-c23"><span class="secno">3.12</span> <span class="content">Poll 12: Send "<span title="Runtime format strings">[P2905R2]</span> Runtime format strings" to Library Working Group for C++26 and as a DR for C++23.</span></a>
+      <li><a href="#poll-13-send-p2918r1-runtime-format-strings-ii-to-library-working-group-for-c26"><span class="secno">3.13</span> <span class="content">Poll 13: Send "<span title="Runtime format strings II">[P2918R1]</span> Runtime format strings II" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-14-send-p2937r0-freestanding-remove-strtok-to-library-working-group-for-c26"><span class="secno">3.14</span> <span class="content">Poll 14: Send "<span title="Freestanding: Remove strtok">[P2937R0]</span> Freestanding: Remove <code class="highlight"><c- n>strtok</c-></code>" to Library Working Group for C++26.</span></a>
+      <li><a href="#poll-15-send-p2909r2-fix-formatting-of-code-units-as-integers-dude-wheres-my-char-to-library-working-group-for-c26-and-as-a-dr-for-c23"><span class="secno">3.15</span> <span class="content">Poll 15: Send "<span title="Fix formatting of code units as integers (Dude, where&apos;s my char?)">[P2909R2]</span> Fix formatting of code units as integers (Dude, where’s my char?)" to Library Working Group for C++26 and as a DR for C++23.</span></a>
+     </ol>
+    <li>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
       <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
@@ -2069,13 +2022,11 @@ dfn > a.self-link::before      { content: "#"; }
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
-   <p>In 2023-05, the C++ Library Evolution group conducted a series of
-  electronic decision polls <a data-link-type="biblio" href="https://wg21.link/p2650r0">[P2650R0]</a>.
+   <p>In 2023-09, the C++ Library Evolution group conducted a series of electronic decision polls <a data-link-type="biblio" href="https://wg21.link/p2972r0" title="2023-09 Library Evolution Polls">[P2972R0]</a>.
 This paper provides the results of those polls and summarizes the results.</p>
    <p>In total, 25 people participated in the polls.
-Some participants opted to not vote on some polls.
-Thank you to everyone who participated, and to the proposal authors for all
-  their hard work!</p>
+Some participants opted to not vote on some polls (Poll 2, Poll 8, Poll 12, Poll 13, had a low participation rate).
+Thank you to everyone who participated, and to the proposal authors for all their hard work!</p>
    <h2 class="heading settled" data-level="2" id="poll-outcomes"><span class="secno">2. </span><span class="content">Poll Outcomes</span><a class="self-link" href="#poll-outcomes"></a></h2>
    <ul>
     <li data-md>
@@ -2100,110 +2051,580 @@ Thank you to everyone who participated, and to the proposal authors for all
       <th>SA 
       <th>Outcome 
      <tr>
-      <td> Poll 1: Send <a data-link-type="biblio" href="https://wg21.link/p1673r12">[P1673R12]</a> BLAS Linear Algebra to Library Working Group for C++26. 
-      <td>5 
-      <td>9 
-      <td>2 
-      <td>1 
-      <td>1 
-      <td>Consensus in favor. 
-     <tr>
-      <td> Poll 2: Send <a data-link-type="biblio" href="https://wg21.link/p2630r3">[P2630R3]</a> <code class="highlight"><c- n>submdspan</c-></code> to Library Working Group for C++26. 
-      <td>10 
-      <td>4 
-      <td>1 
-      <td>0 
-      <td>1 
-      <td>Consensus in favor. 
-     <tr>
-      <td> Poll 3: Send <a data-link-type="biblio" href="https://wg21.link/p1383r1">[P1383R1]</a> More <code class="highlight"><c- k>constexpr</c-></code> For <code class="highlight"><c- o>&lt;</c-><c- n>cmath</c-><c- o>></c-></code> And <code class="highlight"><c- o>&lt;</c-><c- n>complex</c-><c- o>></c-></code> to Library Working Group for C++26. 
-      <td>11 
-      <td>9 
-      <td>1 
-      <td>0 
-      <td>0 
-      <td>Strong consensus in favor. 
-     <tr>
-      <td> Poll 4: Send <a data-link-type="biblio" href="https://wg21.link/p2546r3">[P2546R3]</a> Debugging Support to Library Working Group for C++26. 
-      <td>13 
-      <td>7 
-      <td>0 
-      <td>0 
-      <td>1 
-      <td>Consensus in favor. 
-     <tr>
-      <td> Poll 5: Send <a data-link-type="biblio" href="https://wg21.link/P2548R5">[P2548R5]</a> <code class="highlight"><c- n>copyable_function</c-></code> to Library Working Group for C++26. 
-      <td>11 
-      <td>8 
-      <td>2 
-      <td>1 
-      <td>0 
-      <td>Consensus in favor. 
-     <tr>
-      <td> Poll 6: Send <a data-link-type="biblio" href="https://wg21.link/p2714r0">[P2714R0]</a> Bind Front And Back To NTTP Callables to Library Working Group for C++26. 
-      <td>4 
-      <td>7 
-      <td>4 
-      <td>1 
-      <td>0 
-      <td>Consensus in favor. 
-     <tr>
-      <td> Poll 7: Send <a data-link-type="biblio" href="https://wg21.link/P2637R2">[P2637R2]</a> Member <code class="highlight"><c- n>visit</c-></code> to Library Working Group for C++26. 
-      <td>13 
-      <td>6 
-      <td>0 
-      <td>2 
-      <td>1 
-      <td>Consensus in favor. 
-     <tr>
-      <td> Poll 8: Send <a data-link-type="biblio" href="https://wg21.link/P2757R2">[P2757R2]</a> Type-Checking Format Args to Library Working Group for C++26. 
-      <td>15 
-      <td>4 
-      <td>1 
-      <td>0 
-      <td>0 
-      <td>Strong consensus in favor. 
-     <tr>
-      <td> Poll 9: Send <a data-link-type="biblio" href="https://wg21.link/P2641R3">[P2641R3]</a> Checking If A Union Alternative Is Active to Library Working Group for C++26. 
-      <td>5 
+      <td> Poll 1: Send "<a data-link-type="biblio" href="https://wg21.link/p0843r9" title="inplace_vector">[P0843R9]</a> <code class="highlight"><c- n>inplace_vector</c-></code>" to Library Working Group for C++26. 
       <td>12 
+      <td>6 
+      <td>2 
+      <td>1 
+      <td>1 
+      <td>Consensus in favor. 
+     <tr>
+      <td> Poll 2: Send "<a data-link-type="biblio" href="https://wg21.link/p1068r9" title="Vector API for random number generation">[P1068R9]</a> Vector API for random number generation" to Library Working Group for C++26. 
+      <td>6 
+      <td>7 
+      <td>2 
+      <td>0 
+      <td>0 
+      <td>Strong consensus in favor. 
+     <tr>
+      <td> Poll 3: Send "<a data-link-type="biblio" href="https://wg21.link/p2447r4" title="std::span over an initializer list">[P2447R4]</a> <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>span</c-></code> over an initializer list" to Library Working Group for C++26. 
+      <td>7 
+      <td>12 
+      <td>0 
+      <td>1 
+      <td>1 
+      <td>Consensus in favor. 
+     <tr>
+      <td> Poll 4: Send "<a data-link-type="biblio" href="https://wg21.link/p2591r4" title="Concatenation of strings and string views">[P2591R4]</a> Concatenation of strings and string views" to Library Working Group for C++26. 
+      <td>8 
+      <td>11 
+      <td>2 
+      <td>1 
+      <td>0 
+      <td>Strong consensus in favor. 
+     <tr>
+      <td> Poll 5: Send "<a data-link-type="biblio" href="https://wg21.link/p2819r1" title="Add tuple protocol to complex">[P2819R1]</a> Add tuple protocol to complex" to Library Working Group for C++26. 
+      <td>14 
+      <td>5 
       <td>1 
       <td>0 
       <td>0 
       <td>Strong consensus in favor. 
      <tr>
-      <td> Poll 10: Send <a data-link-type="biblio" href="https://wg21.link/P1759R6">[P1759R6]</a> Native Handles And File Streams to Library Working Group for C++26. 
-      <td>10 
+      <td> Poll 6: Send "<a data-link-type="biblio" href="https://wg21.link/p2821r4" title="span.at()">[P2821R4]</a> <code class="highlight"><c- n>span</c-><c- p>.</c-><c- n>at</c-><c- p>()</c-></code>" to Library Working Group for C++26. 
       <td>9 
+      <td>9 
+      <td>2 
+      <td>0 
+      <td>2 
+      <td>Consensus in favor. 
+     <tr>
+      <td> Poll 7: Send "<a data-link-type="biblio" href="https://wg21.link/p2833r1" title="Freestanding Library: inout expected span">[P2833R1]</a> Freestanding Library: inout expected span" to Library Working Group for C++26. 
+      <td>9 
+      <td>8 
+      <td>0 
+      <td>0 
+      <td>1 
+      <td>Consensus in favor. 
+     <tr>
+      <td> Poll 8: Send "<a data-link-type="biblio" href="https://wg21.link/p2836r1" title="std::basic_const_iterator should follow its underlying type&apos;s convertibility">[P2836R1]</a> <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>basic_const_iterator</c-></code> should follow its underlying type’s convertibility" to Library Working Group for C++26 and as a DR for C++23. 
+      <td>11 
+      <td>4 
       <td>0 
       <td>0 
       <td>0 
       <td>Strong consensus in favor. 
      <tr>
-      <td> Poll 11: Send <a data-link-type="biblio" href="https://wg21.link/p2697r0">[P2697R0]</a> Interfacing <code class="highlight"><c- n>bitset</c-></code> With <code class="highlight"><c- n>string_view</c-></code> to Library Working Group for C++26. 
+      <td> Poll 9: Send "<a data-link-type="biblio" href="https://wg21.link/p2868r1" title="Remove Deprecated `std::allocator` Typedef From C++26">[P2868R1]</a> Remove Deprecated <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>allocator</c-></code> Typedef From C++26" to Library Working Group for C++26. 
+      <td>15 
+      <td>5 
+      <td>1 
+      <td>0 
+      <td>0 
+      <td>Strong consensus in favor. 
+     <tr>
+      <td> Poll 10: Send "<a data-link-type="biblio" href="https://wg21.link/p2870r1" title="Remove `basic_string::reserve()` From C++26">[P2870R1]</a> Remove <code class="highlight"><c- n>basic_string</c-><c- o>::</c-><c- n>reserve</c-><c- p>()</c-></code> From C++26" to Library Working Group for C++26. 
+      <td>16 
+      <td>3 
+      <td>1 
+      <td>1 
+      <td>0 
+      <td>Strong consensus in favor. 
+     <tr>
+      <td> Poll 11: Send "<a data-link-type="biblio" href="https://wg21.link/p2871r2" title="Remove Deprecated Unicode Conversion Facets From C++26">[P2871R2]</a> Remove Deprecated Unicode Conversion Facets From C++26" to Library Working Group for C++26. 
+      <td>13 
+      <td>5 
+      <td>1 
+      <td>0 
+      <td>0 
+      <td>Strong consensus in favor. 
+     <tr>
+      <td> Poll 12: Send "<a data-link-type="biblio" href="https://wg21.link/p2905r2" title="Runtime format strings">[P2905R2]</a> Runtime format strings" to Library Working Group for C++26 and as a DR for C++23. 
       <td>8 
       <td>8 
+      <td>0 
+      <td>0 
+      <td>0 
+      <td>Strong consensus in favor. 
+     <tr>
+      <td> Poll 13: Send "<a data-link-type="biblio" href="https://wg21.link/p2918r1" title="Runtime format strings II">[P2918R1]</a> Runtime format strings II" to Library Working Group for C++26. 
+      <td>10 
+      <td>4 
+      <td>0 
+      <td>2 
+      <td>0 
+      <td>Consensus in favor. 
+     <tr>
+      <td> Poll 14: Send "<a data-link-type="biblio" href="https://wg21.link/p2937r0" title="Freestanding: Remove strtok">[P2937R0]</a> Freestanding: Remove <code class="highlight"><c- n>strtok</c-></code>" to Library Working Group for C++26. 
+      <td>14 
+      <td>4 
       <td>1 
       <td>0 
       <td>1 
       <td>Consensus in favor. 
      <tr>
-      <td> Poll 12: Send <a data-link-type="biblio" href="https://wg21.link/p2248r7">[P2248R7]</a> Enabling List-Initialization For Algorithms to Library Working Group for C++26. 
-      <td>7 
-      <td>9 
-      <td>4 
-      <td>0 
-      <td>0 
-      <td>Strong consensus in favor. 
-     <tr>
-      <td> Poll 13: Send <a data-link-type="biblio" href="https://wg21.link/p2734r0">[P2734R0]</a> Adding The New 2022 SI Prefixes to Library Working Group for C++26. 
-      <td>9 
+      <td> Poll 15: Send "<a data-link-type="biblio" href="https://wg21.link/p2909r2" title="Fix formatting of code units as integers (Dude, where&apos;s my char?)">[P2909R2]</a> Fix formatting of code units as integers (Dude, where’s my char?)" to Library Working Group for C++26 and as a DR for C++23. 
       <td>10 
-      <td>2 
+      <td>8 
+      <td>1 
       <td>0 
       <td>0 
       <td>Strong consensus in favor. 
    </table>
+   <p>All the polls have consensus in favor, and will be forwarded to LWG.</p>
+   <h2 class="heading settled" data-level="3" id="poll-comments"><span class="secno">3. </span><span class="content">Selected Poll Comments</span><a class="self-link" href="#poll-comments"></a></h2>
+   <p>For some of the comments, small parts were removed to anonymize.</p>
+   <h3 class="heading settled" data-level="3.1" id="poll-1-send-p0843r9-inplace_vector-to-library-working-group-for-c26"><span class="secno">3.1. </span><span class="content">Poll 1: Send "<a data-link-type="biblio" href="https://wg21.link/p0843r9" title="inplace_vector">[P0843R9]</a> <code class="highlight"><c- n>inplace_vector</c-></code>" to Library Working Group for C++26.</span><a class="self-link" href="#poll-1-send-p0843r9-inplace_vector-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>This is a much needed vocabulary type. Now if only clump/small_vector would get in, then we’d have the complete set.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>This will be a useful addition although I feel the unsafe unchecked_push_back is insufficiently motivated based on benchmark data I’ve seen.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>This will be a useful addition although I feel the unsafe unchecked_push_back is insufficiently motivated based on benchmark data I’ve seen.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>This has some performance wins, and has the potential to add a resizable container to freestanding. I’m not thrilled with the unchecked calls from a security perspective, but they are far better than any of the other alternatives that have a chance to make it through the committee.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Not sure this has had enough time to bake with the current wording. In particular, I believe that the "constexpr" part is currently unimplementable. But, LWG can always send it back if they agree.</p>
+    <p>— Neutral</p>
+   </blockquote>
+   <blockquote>
+    <p>I have some concerns regarding the error handling using exceptions, I think this paper requires more discussion</p>
+    <p>— Weakly Against</p>
+   </blockquote>
+   <blockquote>
+    <p>There is are very few scenarios in which bad_alloc is useful, one of them is by logging that the system has run out of memory.
+This paper nullifies that use cases by using bad_alloc as the exception it choose to throws, despite having nothing to do at all whatsoever with allocations. What is the point of having a complex hierarchy with bases classes and virtual methods if we are not going to use it correctly?
+The paper is not motivated, or rather the motivation for this paper ie supporting "environment which can’t allocate" run afoul if its design "everything throws".
+In its current form, this is unlikely to be adopted by the game industry, the embedded community and other such constrained scenario.
+This type is therefore not fit for purpose.</p>
+    <p>— Strongly Against</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.2" id="poll-2-send-p1068r9-vector-api-for-random-number-generation-to-library-working-group-for-c26"><span class="secno">3.2. </span><span class="content">Poll 2: Send "<a data-link-type="biblio" href="https://wg21.link/p1068r9" title="Vector API for random number generation">[P1068R9]</a> Vector API for random number generation" to Library Working Group for C++26.</span><a class="self-link" href="#poll-2-send-p1068r9-vector-api-for-random-number-generation-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>The current one-element-at a-time interface pessimizes for both vectorization and parallelism. The paper’s new interface corrects this, and also updates random number generation for C++ Ranges.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>It allows to make standard RNG faster even without low-level API if the quality of implementation is good. All the comments were address. Let’s ship it!</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>It is unclear to me whether we have implementation experience with exactly what’s being proposed.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>I’m not yet convinced this is required by a large group of standard library users</p>
+    <p>— Weakly Favour</p>
+   </blockquote>
+   <blockquote>
+    <p>The wording looks dubious.</p>
+    <p>— Neutral</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.3" id="poll-3-send-p2447r4-stdspan-over-an-initializer-list-to-library-working-group-for-c26"><span class="secno">3.3. </span><span class="content">Poll 3: Send "<a data-link-type="biblio" href="https://wg21.link/p2447r4" title="std::span over an initializer list">[P2447R4]</a> <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>span</c-></code> over an initializer list" to Library Working Group for C++26.</span><a class="self-link" href="#poll-3-send-p2447r4-stdspan-over-an-initializer-list-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>This is how it should be. Simple and expected behavior. While incomplete due to lack of guaranteed storage duration, this remains a step in the right direction.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>A initializer_list is essentially an immutable view over an fixed-size array. It seems like an oversight, that such a type wouldn’t be compatible with span.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>
+     Every time a class is introduced, we should ask if a constructor from initializer_list makes sense or not, because adding them "after the fact" isn’t always possible.
+As an argument type, span
+     <const t>
+       tries to replace a const vector
+      <t>, and span should’ve had initializer_list construction from day one.</t>
+     </const>
+    </p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>
+     It would be unfortunate to have to recommend the <code class="idl"><a data-link-type="idl">1,2,3</a></code> syntax.
+The "void two(span
+     <const U00032 intU0002C>);" example is the most concerning incompatibility, but the general rule of initializer lists having runtime size is probably sufficient to avoid most confusion there.</const>
+    </p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Breaking code is a little bit scary.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>This should not be a DR. I read the poll as if it isn’t.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>The proposal does improve ergonomics. I’m a bit troubled by Section 4.2 ("The initializer_list ctor has high precedence"), in that it might discourage use of spans with compile-time sizes.
+On the other hand, there is a straightforward work-around.  I wonder if we could solve this issue with a deduction guide that uses is_constant_evaluated() to determine whether calling .size() on the initializer_list results in a constant expression.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Long time in waiting. There is some worry (hence the WF vote) about the cases of broken code, some of them not entirely contrived, but the benefit in both ease of writing and language consistency (and possibly even performance) clearly supersedes that.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>(...) I believe this feature doesn’t bring so much value but on the other hand it introduces the breaking change and enables simpler use-cases like <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>span</c-><c- o>&lt;</c-><c- k>const</c-> <c- b>int</c-><c- o>></c-> <c- n>s</c-><c- p>{</c-><c- mi>1</c-><c- p>,</c-><c- mi>2</c-><c- p>,</c-><c- mi>3</c-><c- p>};</c-></code> which is error prone. Yeah, it’s better than <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>span</c-><c- o>&lt;</c-><c- b>int</c-><c- o>></c-> <c- n>s</c-><c- p>{</c-><c- mi>1</c-><c- p>,</c-><c- mi>2</c-><c- p>,</c-><c- mi>3</c-><c- p>};</c-></code> because of <code class="highlight"><c- k>const</c-></code> and far better than <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>span</c-> <c- n>s</c-><c- p>{</c-><c- mi>1</c-><c- p>,</c-><c- mi>2</c-><c- p>,</c-><c- mi>3</c-><c- p>};</c-></code> and doesn’t work because deduction guides are not enabled for this use-case (fortunately) but still I believe danger for the user is more than the value since the applicability of the API is pretty narrow to me.
+On the other hand, we already have precedence in the standard where class initialized with temporary could immediately dangle. That’s why I am weakly against. If this papers lands, so be it.</p>
+    <p>— Weakly Against</p>
+   </blockquote>
+   <blockquote>
+    <p>span is not a container and should not pretend to be one.</p>
+    <p>— Strongly Against</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.4" id="poll-4-send-p2591r4-concatenation-of-strings-and-string-views-to-library-working-group-for-c26"><span class="secno">3.4. </span><span class="content">Poll 4: Send "<a data-link-type="biblio" href="https://wg21.link/p2591r4" title="Concatenation of strings and string views">[P2591R4]</a> Concatenation of strings and string views" to Library Working Group for C++26.</span><a class="self-link" href="#poll-4-send-p2591r4-concatenation-of-strings-and-string-views-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>I’ve lost track of how many times I had to workaround these missing operators.
+While it may have been good intentioned to leave them out until we can come up with a lazy concatenation design, said feature never materialized and most probably shouldn’t be spelled as operator+ to begin with.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>This improves ergonomics and teachability.
+I am convinced by the arguments in Section 2.1 ("Why are those overloads missing in the first place?") why we should not delay adding this feature in the name of a nonexistent future proposal that could not be implemented fully anyway.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>I strongly believe that we should NOT be updating the __cpp_­lib_­string_­view feature test macro, as we are making NO changes to string_view.
+We should add a new feature test macro instead (as none of the string ones look to be appropriate).
+(I would have voted SF instead of WF had it been a different feature test macro).
+Also, breaking user code is a little bit scary.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Fixes an inconsistency in the library users have been complaining about (https://stackoverflow.com/q/44636549/471164).</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>The proposal is the only reasonable interpretation of the syntax (and its discussion of the history adequately explains the omission as no longer relevant).</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Slightly hesitant due to the conversion-related risks. Overall though this is a highly missed addition, long time due.
+With this we will no longer have to guide devs to define string constants as constexpr string_view – but only if they don’t need them to be concatenated, in which case the unfortunate guidance becomes to use const std::string instead.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>It does fix a mistake, but unimportant.</p>
+    <p>— Neutral</p>
+   </blockquote>
+   <blockquote>
+    <p>Worried about the issues raised in Annex C;
+I’d prefer to see just the string + string_view overloads and not the additional overloads specified by [tab:string.op.plus.string_view.overloads].</p>
+    <p>— Weakly Against</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.5" id="poll-5-send-p2819r1-add-tuple-protocol-to-complex-to-library-working-group-for-c26"><span class="secno">3.5. </span><span class="content">Poll 5: Send "<a data-link-type="biblio" href="https://wg21.link/p2819r1" title="Add tuple protocol to complex">[P2819R1]</a> Add tuple protocol to complex" to Library Working Group for C++26.</span><a class="self-link" href="#poll-5-send-p2819r1-add-tuple-protocol-to-complex-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>This is how it should be. Simple and expected behavior. It is expected that new features will be consistent with the rest of the language.
+As such this is more a spec fix or completion of previous work.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Good facility for std::complex. Assuming the comment on tuple-like concept is addressed I have no objections to that.
+Hopefully, one day we fix the tuple protocol to make it generic enough but it’s a separate story.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>
+     There was a concern about using hidden friends (although I’m not sure it was brought up formally):
+The main difference between having a normal function vs hidden friend is whether or not it is findable for types that are convertible to complex
+     <t>.</t>
+    </p>
+    <p>
+     E.g. given:
+struct my_imaginary {
+  double scale;
+  operator std::complex
+     <double>() const noexcept { return {0, scale}; }
+};</double>
+    </p>
+    <p>
+     Then the following will only work if std::complex
+     <t> has non-hidden get() functions:
+my_imaginary x;
+auto [r, i] = x;  // error: If get() is a hidden friend.</t>
+    </p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>It makes sense for complex to be decomposable but should it be tuple_like?</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Looks acceptable. I can’t get excited about using structured bindings.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Applying get&lt;0>(c) to complex values may spoil redability of mathematically intensive code, but at the same the paper adds better integration with other standard facilities. Thus neutral.</p>
+    <p>— Neutral</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.6" id="poll-6-send-p2821r4-spanat-to-library-working-group-for-c26"><span class="secno">3.6. </span><span class="content">Poll 6: Send "<a data-link-type="biblio" href="https://wg21.link/p2821r4" title="span.at()">[P2821R4]</a> <code class="highlight"><c- n>span</c-><c- p>.</c-><c- n>at</c-><c- p>()</c-></code>" to Library Working Group for C++26.</span><a class="self-link" href="#poll-6-send-p2821r4-spanat-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>I’ve already used "span.at()" a few times in code bases, just so that I can be reminded by the compiler that it doesn’t exist yet.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>While it doesn’t bring much value to std::span itself it does bring the value to a generic code and it makes API more consistent.
+Since we can now add classes partially to freestanding I don’t have any problems with adding this method.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>We can entertain lengthy discussions about how and why std::span differs from the original gls::span, but at this point we should simply strive for consistency.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>It is embarrassing not to have it. It is safe and consistent. We need more safe functions instead of unsafe ones.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>This addition makes span more consistent with vector. I also appreciate that the author has taken the time to address freestanding.
+However, I disagree that "a function that throws when the input is out of bounds" is necessarily "safer" than a function with a nontrivial precondition. I’m not an expert in functional safety, but I’ve heard such experts share my opinion.
+My concern only addresses this one motivation for the paper; making span consistent with vector justifies the paper in itself.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>So long as we’re happy having classes have incomplete interfaces in freestanding, this is only reasonable based on consistency, since there’s no cost to having the feature.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Not convinced that this is worth adding.</p>
+    <p>— Neutral</p>
+   </blockquote>
+   <blockquote>
+    <p>This is extremely poorly motivated in my view.
+Throwing exception of developer error is not something we should encourage, and it certainly does not encourage safety.
+Consistency with past mistakes is also not a very convincing argument.
+Ask your local standard library implementer an harden build that terminates on out-of-bound. These things exist and they are great!</p>
+    <p>— Strongly Against</p>
+   </blockquote>
+   <blockquote>
+    <p>This is safety theatre (a term analogous to the well understood term "security theater").
+MISRA doesn’t require usage of .at() and I don’t see C++ engineers adopting .at() any time soon.
+If we want to reduce C++ vulnerabilities due to memory safety violations, we should attack that problem directly instead of making changes that make us feel good, but do nothing to solve our problems.</p>
+    <p>— Strongly Against</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.7" id="poll-7-send-p2833r1-freestanding-library-inout-expected-span-to-library-working-group-for-c26"><span class="secno">3.7. </span><span class="content">Poll 7: Send "<a data-link-type="biblio" href="https://wg21.link/p2833r1" title="Freestanding Library: inout expected span">[P2833R1]</a> Freestanding Library: inout expected span" to Library Working Group for C++26.</span><a class="self-link" href="#poll-7-send-p2833r1-freestanding-library-inout-expected-span-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>freestanding has needed some kind of error handling mechanism for awhile, so this will be a big win.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>This will aid span’s adoption which is essential since it is a fundamental type.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Would have been nice to have the freestanding features done in fewer papers to save time for LEWG.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>We don’t use freestanding, but these additions seem reasonable and useful for those that do.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>The addition of these features to the freestanding subset should be non-controversial.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>I’m unconvinced that spending time on the freestanding dialect of C++ is in the interest of our users.</p>
+    <p>— Strongly Against</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.8" id="poll-8-send-p2836r1-stdbasic_const_iterator-should-follow-its-underlying-types-convertibility-to-library-working-group-for-c26-and-as-a-dr-for-c23"><span class="secno">3.8. </span><span class="content">Poll 8: Send "<a data-link-type="biblio" href="https://wg21.link/p2836r1" title="std::basic_const_iterator should follow its underlying type&apos;s convertibility">[P2836R1]</a> <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>basic_const_iterator</c-></code> should follow its underlying type’s convertibility" to Library Working Group for C++26 and as a DR for C++23.</span><a class="self-link" href="#poll-8-send-p2836r1-stdbasic_const_iterator-should-follow-its-underlying-types-convertibility-to-library-working-group-for-c26-and-as-a-dr-for-c23"></a></h3>
+   <blockquote>
+    <p>This fixes a deficiency in the current C++ Standard.  I agree that this change should be considered library DR.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>We need to add uniformity, and "wrapper types" should behave as the wrapped type</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>I like not breaking C++20 code</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>I’m not a fan of the DR part.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>The proposed conversions could in theory produce undesired complications, but I haven’t checked.</p>
+    <p>— I do not want to participate in this poll</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.9" id="poll-9-send-p2868r1-remove-deprecated-stdallocator-typedef-from-c26-to-library-working-group-for-c26"><span class="secno">3.9. </span><span class="content">Poll 9: Send "<a data-link-type="biblio" href="https://wg21.link/p2868r1" title="Remove Deprecated `std::allocator` Typedef From C++26">[P2868R1]</a> Remove Deprecated <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>allocator</c-></code> Typedef From C++26" to Library Working Group for C++26.</span><a class="self-link" href="#poll-9-send-p2868r1-remove-deprecated-stdallocator-typedef-from-c26-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>Once a good idea, but now std::allocator is no longer necessary.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Although implementations will likely leave these in, the purpose of deprecation is ultimately to remove things, and so this should be done.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>We must remove or control baggage if C++ is to grow, change and remain relevant.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>I’ll finger the elephant in the room: DRY violation. This is an attribute, so its single source of truth should be allocator_traits, it has no business getting itself duplicated anywhere else.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>We have experience with the removed members in std::allocator.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.10" id="poll-10-send-p2870r1-remove-basic_stringreserve-from-c26-to-library-working-group-for-c26"><span class="secno">3.10. </span><span class="content">Poll 10: Send "<a data-link-type="biblio" href="https://wg21.link/p2870r1" title="Remove `basic_string::reserve()` From C++26">[P2870R1]</a> Remove <code class="highlight"><c- n>basic_string</c-><c- o>::</c-><c- n>reserve</c-><c- p>()</c-></code> From C++26" to Library Working Group for C++26.</span><a class="self-link" href="#poll-10-send-p2870r1-remove-basic_stringreserve-from-c26-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>I’m not sure why this function even exists in the first place. The default parameter that was originally supplied looks like a design bug - especially as it was exclusive to basic_string.
+Given that we have a replacement since C++11 and it isn’t even functional anymore since C++20 I see no reason to retain this overload.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Although implementations will likely leave these in, the purpose of deprecation is ultimately to remove things, and so this should be done.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>We must remove or control baggage if C++ is to grow, change and remain relevant.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>The real semantic change (which is justifiable) has already occurred.  This is, if anything, helpfully alerting people to the fact.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>I’m worried about the reported lack of deprecation warnings, and about the paper missing any research into the amount of existing code which may be broken by this.
+I think straight up removal may surprise some users by providing them no immediate clue as to how to modify their code.
+Therefore the path forward should be one cycle in which this function is implemented via a static_assert(false) with a relevant error message, followed by complete removal only in the next cycle (C++29).</p>
+    <p>— Weakly Against</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.11" id="poll-11-send-p2871r2-remove-deprecated-unicode-conversion-facets-from-c26-to-library-working-group-for-c2"><span class="secno">3.11. </span><span class="content">Poll 11: Send "<a data-link-type="biblio" href="https://wg21.link/p2871r2" title="Remove Deprecated Unicode Conversion Facets From C++26">[P2871R2]</a> Remove Deprecated Unicode Conversion Facets From C++26" to Library Working Group for C++2</span><a class="self-link" href="#poll-11-send-p2871r2-remove-deprecated-unicode-conversion-facets-from-c26-to-library-working-group-for-c2"></a></h3>
+   <blockquote>
+    <p>Having these seems worse than having nothing.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>The implementation is broken in MSVC at one point anyway.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Regularly removing deprecated functionality is a good practice.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>This feature has never fundamentally worked correctly.  Deprecation and, now, removal even without replacement is appropriate.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Due to lack of usage experience I can’t comment on these facets.</p>
+    <p>— Neutral</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.12" id="poll-12-send-p2905r2-runtime-format-strings-to-library-working-group-for-c26-and-as-a-dr-for-c23"><span class="secno">3.12. </span><span class="content">Poll 12: Send "<a data-link-type="biblio" href="https://wg21.link/p2905r2" title="Runtime format strings">[P2905R2]</a> Runtime format strings" to Library Working Group for C++26 and as a DR for C++23.</span><a class="self-link" href="#poll-12-send-p2905r2-runtime-format-strings-to-library-working-group-for-c26-and-as-a-dr-for-c23"></a></h3>
+   <blockquote>
+    <p>This is the right thing to do.  We should also make this a DR for C++23.  I can’t think of any correct code that would be broken by doing so.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Improves safety of a formatting API by preventing some lifetime issues.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>I’m not a fan of the DR part, but it seems more plausible here than in some other cases.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Preventing dangling is great but it is concerning that we continue to retroactively modify std::format two standard cycles after the feature was initially added.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Obviously being able to use such strings is valuable, but the change could easily be unfortunately invasive; I haven’t tried to vet it independently.</p>
+    <p>— I do not want to participate in this poll</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.13" id="poll-13-send-p2918r1-runtime-format-strings-ii-to-library-working-group-for-c26"><span class="secno">3.13. </span><span class="content">Poll 13: Send "<a data-link-type="biblio" href="https://wg21.link/p2918r1" title="Runtime format strings II">[P2918R1]</a> Runtime format strings II" to Library Working Group for C++26.</span><a class="self-link" href="#poll-13-send-p2918r1-runtime-format-strings-ii-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>This is a good idea. Separating this from P2905 (the safety fix alone) was also a good idea, so that P2905 could be made a DR, while P2918 can be introduced "normally" in C++26.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>A straight-forward extension to std::format that doesn’t require changing existing standards and enables to-date missing functionality.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>A very important addition to std::format that allows to explicitly opt out of compile-time checks instead of misusing type erased APIs.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Has implementation and usage experience.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>The new API seems a bit confusing, but not enough to preclude the important functionality.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Users expect to be able to use a std::string as the first argument of std::format.
+If we lack the language facilities to provide this, we should add them instead of spending time with unsatisfying workarounds.</p>
+    <p>— Weakly Against</p>
+   </blockquote>
+   <blockquote>
+    <p>Why not std::runtime_format(str, 42)</p>
+    <p>— Weakly Against</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.14" id="poll-14-send-p2937r0-freestanding-remove-strtok-to-library-working-group-for-c26"><span class="secno">3.14. </span><span class="content">Poll 14: Send "<a data-link-type="biblio" href="https://wg21.link/p2937r0" title="Freestanding: Remove strtok">[P2937R0]</a> Freestanding: Remove <code class="highlight"><c- n>strtok</c-></code>" to Library Working Group for C++26.</span><a class="self-link" href="#poll-14-send-p2937r0-freestanding-remove-strtok-to-library-working-group-for-c26"></a></h3>
+   <blockquote>
+    <p>One foot-gun less ... strtok should actually be removed from the entire standard library.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>This function should not only be removed from freestanding, it should be yanked from the standard library as a whole.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Keep C++ freestanding in line with C freestanding.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>One could argue that strtok on freestanding should just not be thread-safe at all, but the fact that C doesn’t expect it to be there tips the balance in favor of removing it. (Who uses it anyway?)</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Would have been nice to have the freestanding features done in fewer papers to save time for LEWG</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>I’m unconvinced that spending time on the freestanding dialect of C++ is in the interest of our users.</p>
+    <p>— Strongly Against</p>
+   </blockquote>
+   <h3 class="heading settled" data-level="3.15" id="poll-15-send-p2909r2-fix-formatting-of-code-units-as-integers-dude-wheres-my-char-to-library-working-group-for-c26-and-as-a-dr-for-c23"><span class="secno">3.15. </span><span class="content">Poll 15: Send "<a data-link-type="biblio" href="https://wg21.link/p2909r2" title="Fix formatting of code units as integers (Dude, where&apos;s my char?)">[P2909R2]</a> Fix formatting of code units as integers (Dude, where’s my char?)" to Library Working Group for C++26 and as a DR for C++23.</span><a class="self-link" href="#poll-15-send-p2909r2-fix-formatting-of-code-units-as-integers-dude-wheres-my-char-to-library-working-group-for-c26-and-as-a-dr-for-c23"></a></h3>
+   <blockquote>
+    <p>This feels like the right thing to do, even if it is a breaking change.  It’s important for Standard Library output to be consistent.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Spec fixes should be done, especially when there is negligible breakage.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Fixes a problematic behavior in formatting characters as integers and makes formatting consistent among platforms.</p>
+    <p>— Strongly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Improved consistency is great but we are yet again retroactively changing the meaning of std::format.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>No one expects code units to actually be negative and relies on two’s complement (and little real arithmetic) to make that never matter in practice.</p>
+    <p>— Weakly Favor</p>
+   </blockquote>
+   <blockquote>
+    <p>Runtime change in behavior of C++20 facilities makes me really nervous, even when the change in an improvement.</p>
+    <p>— Neutral</p>
+   </blockquote>
   </main>
 <script>
 (function() {
@@ -2337,32 +2758,36 @@ Thank you to everyone who participated, and to the proposal authors for all
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
-   <dt id="biblio-p1383r1">[P1383R1]
-   <dd>Oliver Rosten. <a href="https://wg21.link/p1383r1"><cite>More constexpr for cmath and complex</cite></a>. 21 November 2022. URL: <a href="https://wg21.link/p1383r1">https://wg21.link/p1383r1</a>
-   <dt id="biblio-p1673r12">[P1673R12]
-   <dd>Mark Hoemmen, Daisy Hollman,Christian Trott,Daniel Sunderland,Nevin Liber,Alicia KlinvexLi-Ta Lo,Damien Lebrun-Grandie,Graham Lopez,Peter Caday,Sarah Knepper,Piotr Luszczek,Timothy Costa. <a href="https://wg21.link/p1673r12"><cite>A free function linear algebra interface based on the BLAS</cite></a>. 15 March 2023. URL: <a href="https://wg21.link/p1673r12">https://wg21.link/p1673r12</a>
-   <dt id="biblio-p1759r6">[P1759R6]
-   <dd>Elias Kosunen. <a href="https://wg21.link/P1759R6"><cite>Native Handles And File Streams</cite></a>. 2023-05-15. URL: <a href="https://wg21.link/P1759R6">https://wg21.link/P1759R6</a>
-   <dt id="biblio-p2248r7">[P2248R7]
-   <dd>Giuseppe D'Angelo. <a href="https://wg21.link/p2248r7"><cite>Enabling list-initialization for algorithms</cite></a>. 13 November 2022. URL: <a href="https://wg21.link/p2248r7">https://wg21.link/p2248r7</a>
-   <dt id="biblio-p2546r3">[P2546R3]
-   <dd>René Ferdinand Rivera Morell. <a href="https://wg21.link/p2546r3"><cite>Debugging Support</cite></a>. 15 November 2022. URL: <a href="https://wg21.link/p2546r3">https://wg21.link/p2546r3</a>
-   <dt id="biblio-p2548r5">[P2548R5]
-   <dd>Michael Florian Hava. <a href="https://wg21.link/P2548R5"><cite>copyable_function</cite></a>. 2023-04-03. URL: <a href="https://wg21.link/P2548R5">https://wg21.link/P2548R5</a>
-   <dt id="biblio-p2630r3">[P2630R3]
-   <dd>Christian Trott, Mark Hoemmen, Damien Lebrun-Grandie, Nevin Liber. <a href="https://wg21.link/p2630r3"><cite>Submdspan</cite></a>. 15 March 2023. URL: <a href="https://wg21.link/p2630r3">https://wg21.link/p2630r3</a>
-   <dt id="biblio-p2637r2">[P2637R2]
-   <dd>Barry Revzin. <a href="https://wg21.link/P2637R2"><cite>Member visit</cite></a>. 2023-04-16. URL: <a href="https://wg21.link/P2637R2">https://wg21.link/P2637R2</a>
-   <dt id="biblio-p2641r3">[P2641R3]
-   <dd>Barry Revzin. <a href="https://wg21.link/P2641R3"><cite>Checking If A Union Alternative Is Active</cite></a>. 2023-05-15. URL: <a href="https://wg21.link/P2641R3">https://wg21.link/P2641R3</a>
-   <dt id="biblio-p2650r0">[P2650R0]
-   <dd>Bryce Adelstein Lelbach. <a href="https://wg21.link/p2650r0"><cite>2022-11 Library Evolution Polls</cite></a>. 18 November 2022. URL: <a href="https://wg21.link/p2650r0">https://wg21.link/p2650r0</a>
-   <dt id="biblio-p2697r0">[P2697R0]
-   <dd>Michael Florian Hava. <a href="https://wg21.link/p2697r0"><cite>Interfacing bitset with string_view</cite></a>. 13 November 2022. URL: <a href="https://wg21.link/p2697r0">https://wg21.link/p2697r0</a>
-   <dt id="biblio-p2714r0">[P2714R0]
-   <dd>Zhihao Yuan, Tomasz Kamiński. <a href="https://wg21.link/p2714r0"><cite>Bind front and back to NTTP callables</cite></a>. 13 January 2023. URL: <a href="https://wg21.link/p2714r0">https://wg21.link/p2714r0</a>
-   <dt id="biblio-p2734r0">[P2734R0]
-   <dd>Marc Mutz. <a href="https://wg21.link/p2734r0"><cite>Adding the new 2022 SI prefixes</cite></a>. 20221130. URL: <a href="https://wg21.link/p2734r0">https://wg21.link/p2734r0</a>
-   <dt id="biblio-p2757r2">[P2757R2]
-   <dd>Barry Revzin. <a href="https://wg21.link/P2757R2"><cite>Type-Checking Format Args</cite></a>. 2023-05-15. URL: <a href="https://wg21.link/P2757R2">https://wg21.link/P2757R2</a>
+   <dt id="biblio-p0843r9">[P0843R9]
+   <dd>Gonzalo Brito Gadeschi, Timur Doumler, Nevin Liber, David Sankel. <a href="https://wg21.link/p0843r9"><cite>inplace_vector</cite></a>. 14 September 2023. URL: <a href="https://wg21.link/p0843r9">https://wg21.link/p0843r9</a>
+   <dt id="biblio-p1068r9">[P1068R9]
+   <dd>Ilya Burylov, Pavel Dyakov, Ruslan Arutyunyan, Andrey Nikolaev, Alina Elizarova. <a href="https://wg21.link/p1068r9"><cite>Vector API for random number generation</cite></a>. 14 September 2023. URL: <a href="https://wg21.link/p1068r9">https://wg21.link/p1068r9</a>
+   <dt id="biblio-p2447r4">[P2447R4]
+   <dd>Arthur O'Dwyer, Federico Kircheis. <a href="https://wg21.link/p2447r4"><cite>std::span over an initializer list</cite></a>. 14 May 2023. URL: <a href="https://wg21.link/p2447r4">https://wg21.link/p2447r4</a>
+   <dt id="biblio-p2591r4">[P2591R4]
+   <dd>Giuseppe D'Angelo. <a href="https://wg21.link/p2591r4"><cite>Concatenation of strings and string views</cite></a>. 11 July 2023. URL: <a href="https://wg21.link/p2591r4">https://wg21.link/p2591r4</a>
+   <dt id="biblio-p2819r1">[P2819R1]
+   <dd>Michael Florian Hava, Christoph Hofer. <a href="https://wg21.link/p2819r1"><cite>Add tuple protocol to complex</cite></a>. 14 July 2023. URL: <a href="https://wg21.link/p2819r1">https://wg21.link/p2819r1</a>
+   <dt id="biblio-p2821r4">[P2821R4]
+   <dd>Jarrad J. Waterloo. <a href="https://wg21.link/p2821r4"><cite>span.at()</cite></a>. 26 July 2023. URL: <a href="https://wg21.link/p2821r4">https://wg21.link/p2821r4</a>
+   <dt id="biblio-p2833r1">[P2833R1]
+   <dd>Ben Craig. <a href="https://wg21.link/p2833r1"><cite>Freestanding Library: inout expected span</cite></a>. 19 August 2023. URL: <a href="https://wg21.link/p2833r1">https://wg21.link/p2833r1</a>
+   <dt id="biblio-p2836r1">[P2836R1]
+   <dd>Christopher Di Bella. <a href="https://wg21.link/p2836r1"><cite>std::basic_const_iterator should follow its underlying type's convertibility</cite></a>. 11 July 2023. URL: <a href="https://wg21.link/p2836r1">https://wg21.link/p2836r1</a>
+   <dt id="biblio-p2868r1">[P2868R1]
+   <dd>Alisdair Meredith. <a href="https://wg21.link/p2868r1"><cite>Remove Deprecated `std::allocator` Typedef From C++26</cite></a>. 15 August 2023. URL: <a href="https://wg21.link/p2868r1">https://wg21.link/p2868r1</a>
+   <dt id="biblio-p2870r1">[P2870R1]
+   <dd>Alisdair Meredith. <a href="https://wg21.link/p2870r1"><cite>Remove `basic_string::reserve()` From C++26</cite></a>. 16 August 2023. URL: <a href="https://wg21.link/p2870r1">https://wg21.link/p2870r1</a>
+   <dt id="biblio-p2871r2">[P2871R2]
+   <dd>Alisdair Meredith. <a href="https://wg21.link/p2871r2"><cite>Remove Deprecated Unicode Conversion Facets From C++26</cite></a>. 15 September 2023. URL: <a href="https://wg21.link/p2871r2">https://wg21.link/p2871r2</a>
+   <dt id="biblio-p2905r2">[P2905R2]
+   <dd>Victor Zverovich. <a href="https://wg21.link/p2905r2"><cite>Runtime format strings</cite></a>. 23 July 2023. URL: <a href="https://wg21.link/p2905r2">https://wg21.link/p2905r2</a>
+   <dt id="biblio-p2909r2">[P2909R2]
+   <dd>Victor Zverovich. <a href="https://wg21.link/p2909r2"><cite>Fix formatting of code units as integers (Dude, where's my char?)</cite></a>. 16 September 2023. URL: <a href="https://wg21.link/p2909r2">https://wg21.link/p2909r2</a>
+   <dt id="biblio-p2918r1">[P2918R1]
+   <dd>Victor Zverovich. <a href="https://wg21.link/p2918r1"><cite>Runtime format strings II</cite></a>. 15 July 2023. URL: <a href="https://wg21.link/p2918r1">https://wg21.link/p2918r1</a>
+   <dt id="biblio-p2937r0">[P2937R0]
+   <dd>Ben Craig. <a href="https://wg21.link/p2937r0"><cite>Freestanding: Remove strtok</cite></a>. 2 July 2023. URL: <a href="https://wg21.link/p2937r0">https://wg21.link/p2937r0</a>
+   <dt id="biblio-p2972r0">[P2972R0]
+   <dd>Inbal Levi, Ben Craig, Fabio Fracassi, Corentin Jabot, Nevin Liber, Billy Baker. <a href="https://wg21.link/p2972r0"><cite>2023-09 Library Evolution Polls</cite></a>. 18 September 2023. URL: <a href="https://wg21.link/p2972r0">https://wg21.link/p2972r0</a>
   </dl>
