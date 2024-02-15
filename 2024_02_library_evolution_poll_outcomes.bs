@@ -73,7 +73,7 @@ Poll 2: Send "[[P2872R2]] Remove `wstring_convert` From C++26" to Library Workin
 
 <tr>
 <td>
-Poll 3: Send "[[P2875R3]] Undeprecate `polymorphic_allocator::destroy` For C++26" to Library Working Group for C++26.
+Poll 3: Send "[[P2875R3]] Undeprecate polymorphic_allocator::destroy for C++26" to Library Working Group for C++26.
 <td>
 <td>
 <td>
@@ -83,7 +83,17 @@ Poll 3: Send "[[P2875R3]] Undeprecate `polymorphic_allocator::destroy` For C++26
 
 <tr>
 <td>
-Poll 4: Approve "[[P3109R1]] A plan for `std::execution` for C++26".
+Poll 4: Send "[[P3029R0]] Better mdspan's CTAD" to Library Working Group for C++26.
+<td>
+<td>
+<td>
+<td>
+<td>
+<td>
+
+<tr>
+<td>
+Poll 5: Approve "[[P3109R0]] A plan for `std::execution` for C++26".
 <td>
 <td>
 <td>
@@ -104,6 +114,8 @@ For some of the comments, small parts were removed to anonymize.
 
 ## Poll 2: Send "[[P2872R2]] Remove `wstring_convert` From C++26" to Library Working Group for C++26.
 
-## Poll 3: Send "[[P2875R3]] Undeprecate `polymorphic_allocator::destroy` For C++26" to Library Working Group for C++26.
+## Poll 3: Send "[[P2875R3]] Undeprecate polymorphic_allocator::destroy for C++26" to Library Working Group for C++26.
 
-## Poll 4: Approve "[[P3109R1]] A plan for `std::execution` for C++26".
+## Poll 4: Send "[[P3029R0]] Better mdspan's CTAD" to Library Working Group for C++26.
+
+## Poll 5: Approve "[[P3109R0]] A plan for `std::execution` for C++26".
