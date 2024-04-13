@@ -1,0 +1,95 @@
+<pre class='metadata'>
+Title: 2024-04 Library Evolution Poll Outcomes
+Shortname: P3214
+Revision: 0
+Status: P
+Group: WG21
+
+Editor: Inbal Levi - Library Evolution Chair, MPGC Services LTD, sinbal2l@gmail.com
+Editor: Fabio Fracassi - Library Evolution Assistant Chair, CODE University of Applied Sciences, fabio@fracassi.de
+Editor: Ben Craig - Library Evolution Assistant Chair, Raven, ben.craig@gmail.com 
+Editor: Billy Baker - Library Evolution Incubator Chair, NVIDIA, billy.baker.cpp@gmail.com
+Editor: Nevin Liber - Library Evolution Incubator Assistant Chair and Admin Chair, Argonne National Laboratory, nevin@cplusplusguy.com 
+Editor: Corentin Jabot - Library Mailing List Review Manager, corentin.jabot@gmail.com
+
+Audience: WG21
+
+URL: https://wg21.link/P3214
+!Source: <a href="https://github.com/inbal2l/wg21_library_evolution_polls_outcome_script/blob/main/2024_04_library_evolution_poll_outcomes.bs">GitHub</a>
+Metadata Order: Editor, Source, Project, Audience
+Markup Shorthands: markdown yes
+Toggle Diffs: no
+No Abstract: yes
+Boilerplate: style-syntax-highlighting off
+Default Biblio Display: direct
+</pre>
+
+# Introduction # {#introduction}
+
+In 2024-04, the C++ Library Evolution group conducted a series of electronic decision polls [[P3213R0]].
+This paper provides the results of those polls and summarizes the results.
+
+In total, XX people participated in the polls.
+Some participants opted to not vote on some polls (Poll X and Poll X had a low participation rate).
+Thank you to everyone who participated, and to the papers' authors for all their hard work!
+
+# Poll Outcomes # {#poll-outcomes}
+
+* SF: Strongly Favor.
+* WF: Weakly Favor.
+* N: Neutral.
+* WA: Weakly Against.
+* SA: Strongly Against.
+
+<table>
+<tr>
+<th>Poll
+<th>SF
+<th>WF
+<th>N
+<th>WA
+<th>SA
+<th>Outcome
+
+<tr>
+<td>
+Poll 1: Send "[[PXXXXRX]] TBD
+<td>0
+<td>0
+<td>0
+<td>0
+<td>0
+<td>TBD
+
+
+
+</table>
+
+
+
+# Selected Poll Comments # {#poll-comments}
+
+For some of the comments, small parts were removed to anonymize.
+
+
+## Poll 1: Send "[[PXXXXRX]] TBD" to Library Working Group for C++26.
+
+
+
+<pre class=biblio>
+{
+  "P3213R0": {
+    "title": "2024-04 Library Evolution Polls",
+    "authors": [
+      "Inbal Levi",
+      "Ben Craig",
+      "Fabio Fracassi",
+      "Billy Baker",
+      "Nevin Liber",
+      "Corentin Jabot"
+    ],
+    "href": "https://wg21.link/p3213r0",
+    "date": "15 May 2024"
+  }
+}
+</pre>
