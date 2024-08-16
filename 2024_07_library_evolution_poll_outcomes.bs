@@ -1,0 +1,167 @@
+<pre class='metadata'>
+Title: 2024-07 Library Evolution Poll Outcomes
+Shortname: P3315
+Revision: 0
+Status: P
+Group: WG21
+
+Editor: Inbal Levi - Library Evolution Chair, MPGC Services LTD, sinbal2l@gmail.com
+Editor: Fabio Fracassi - Library Evolution Assistant Chair, CODE University of Applied Sciences, fabio@fracassi.de
+Editor: Ben Craig - Library Evolution Assistant Chair, Raven, ben.craig@gmail.com 
+Editor: Billy Baker - Library Evolution Incubator Chair, NVIDIA, billy.baker.cpp@gmail.com
+Editor: Nevin Liber - Library Evolution Incubator Assistant Chair and Admin Chair, Argonne National Laboratory, nevin@cplusplusguy.com 
+Editor: Corentin Jabot - Library Mailing List Review Manager, corentin.jabot@gmail.com
+
+Audience: WG21
+
+URL: https://wg21.link/P3214
+!Source: <a href="https://github.com/inbal2l/wg21_library_evolution_polls_outcome_script/blob/main/2024_07_library_evolution_poll_outcomes.bs">GitHub</a>
+Metadata Order: Editor, Source, Project, Audience
+Markup Shorthands: markdown yes
+Toggle Diffs: no
+No Abstract: yes
+Boilerplate: style-syntax-highlighting off
+Default Biblio Display: direct
+</pre>
+
+# Introduction # {#introduction}
+
+In 2024-07, the C++ Library Evolution group conducted a series of electronic decision polls [[P3314R0]].
+This paper provides the results of those polls and summarizes the results.
+
+In total, 19 people participated in the polls.
+Some participants opted to not vote on some polls.
+Thank you to everyone who participated, and to the papers' authors for all their hard work!
+
+# Poll Outcomes # {#poll-outcomes}
+
+* SF: Strongly Favor.
+* WF: Weakly Favor.
+* N: Neutral.
+* WA: Weakly Against.
+* SA: Strongly Against.
+
+<table>
+<tr>
+<th>Poll
+<th>SF
+<th>WF
+<th>N
+<th>WA
+<th>SA
+<th>Outcome
+
+<tr>
+<td>
+Poll 1: Send "[[P2835R4]] Expose std::atomic_ref's object address" to Library Working Group for C++26.
+<td>6
+<td>7
+<td>3
+<td>1
+<td>1
+<td>Consensus in favor
+
+<tr>
+<td>
+Poll 2: Send "[[P3016R3]] Resolve inconsistencies in begin/end for valarray and braced initializer lists"
+  to Library Working Group for C++26.
+<td>6
+<td>6
+<td>0
+<td>1
+<td>1
+<td>Consensus in favor
+
+
+</table>
+
+All the polls have consensus in favor and will be forwarded to LWG for C++26.
+
+# Selected Poll Comments # {#poll-comments}
+
+For some of the comments, small parts were removed to anonymize.
+
+
+## Poll 1: Send "[[P2835R4]] Expose std::atomic_ref's object address" to Library Working Group for C++26.
+
+> This extension to std::atomic_ref's API vastly increases its usefulness in the scenarios described in its paper as justification.
+>
+> — Strongly Favor
+
+> Returning a uintptr_t is probably the right balance for not making it too easy to use the object address incorrectly.
+>
+> — Strongly Favor
+
+> no reason to make this optional. uintptr_t should be available unconditionally on all platform
+>
+> — Weakly Favor
+
+> While this is a relatively minor use case, it is only sensible that a facility that constitutes a special reference to an object be able to distinguish that object from others of the same type.  The resistance to error offered by the use of std::uintptr_t is valuable, although adding the generally useful std::copy_cv_t might have made using std::copy_cv_t<T,void>* more palatable in terms of complexity.  Presumably the editors can decide to use the correct feature-test macro value.
+>
+> — Weakly Favor
+
+> Seems well motivated. I suggest avoiding the C-style cast in the specification (when it comes to wording).
+>
+> — Weakly Favor
+
+> The performance optimizations for apps that want to move from the incorrect volatile T* to a correct atomic_ref are important and help fulfill the design intent of atomic_ref. 
+>
+> — Weakly Favor
+
+> Not completely convinced by the motivation
+>  
+> — Neutral
+
+> `uintptr_t` makes this not usable in constexpr, `T *` would be preferable
+>
+> — Strongly Against
+
+
+## Poll 2: Send "[[P3016R3]] Resolve inconsistencies in begin/end for valarray and braced initializer lists" to Library Working Group for C++26.
+
+> The changes to initializer_list are a definite improvement.
+>
+> — Strongly Favor
+
+> All for resolving inconsistencies...!
+>
+> — Strongly Favor
+
+> C++ experts criticize `valarray`, but it does have users.  (Perhaps they keep quiet to avoid attracting attention!) Those users probably would appreciate some fixes.
+> 
+> The author's ad-hoc approach to `valarray` vs. _`braced-initializer-list`_ is reasonable.
+> I think it's reasonable to add `data` and `empty` to `initializer_list`. It's perhaps a wrinkle in the Standard that `initializer_list` and `span` overlap even more than they did before.  The proposed breaking changes (in use of `std::data` and `std::empty`, and in "availability of `begin` / `end`") are improvements to the language.
+> 
+> The author's explanation why the offending `std::begin` and `std::end` declarations in `<initializer_list>` can't be deprecated is reasonable.
+>
+> I'm voting WF and not SF because I don't have a full grasp of how this proposal affects [LWG3624] and [LWG3625].
+>
+> — Weakly Favor
+
+> The changes to std::initializer_list and to std::valarray should be distinct proposals. They might combine to come up in related situations, but the changes are quite distinct.
+>
+> — Weakly Against
+
+> does not solve a real problem 
+>
+> — Strongly Against
+
+
+
+<pre class=biblio>
+{
+  "P3213R0": {
+    "title": "2024-04 Library Evolution Polls",
+    "authors": [
+      "Inbal Levi",
+      "Ben Craig",
+      "Fabio Fracassi",
+      "Billy Baker",
+      "Nevin Liber",
+      "Corentin Jabot"
+    ],
+    "href": "https://wg21.link/p3213r0",
+    "date": "15 May 2024"
+  }
+}
+</pre>
