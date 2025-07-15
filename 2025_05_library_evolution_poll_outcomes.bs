@@ -1,0 +1,105 @@
+<pre class='metadata'>
+Title: 2025-05 Library Evolution Poll Outcomes
+Shortname: P3713
+Revision: 0
+Status: P
+Group: WG21
+
+Editor: Inbal Levi - Library Evolution Chair, MPGC Services LTD, sinbal2l@gmail.com
+Editor: Fabio Fracassi - Library Evolution Assistant Chair, CODE University of Applied Sciences, fabio@fracassi.de
+Editor: Andreas Weis - Library Evolution Assistant Chair, ekxide IO GmbH, cpp@andreas-weis.net
+Editor: Billy Baker - Library Evolution Incubator Chair, NVIDIA, billy.baker.cpp@gmail.com
+Editor: Nevin Liber - Library Evolution Incubator Assistant Chair and Admin Chair, Argonne National Laboratory, nevin@cplusplusguy.com 
+Editor: Corentin Jabot - Library Mailing List Review Manager, corentin.jabot@gmail.com
+
+Audience: WG21
+
+URL: https://wg21.link/P3713
+!Source: <a href="https://github.com/inbal2l/wg21_library_evolution_polls_outcome_script/blob/main/2025_05_library_evolution_poll_outcomes.bs">GitHub</a>
+Metadata Order: Editor, Source, Project, Audience
+Markup Shorthands: markdown yes
+Toggle Diffs: no
+No Abstract: yes
+Boilerplate: style-syntax-highlighting off
+Default Biblio Display: direct
+</pre>
+
+# Introduction # {#introduction}
+
+In 2025-05, the C++ Library Evolution group conducted a series of electronic decision polls [[P3712R0]].
+This paper provides the results of those polls and summarizes the results.
+
+In total, 23 people participated in the polls.
+Thank you to everyone who participated, and to the papers' authors for all their hard work!
+
+# Poll Outcomes # {#poll-outcomes}
+
+* SF: Strongly Favor.
+* WF: Weakly Favor.
+* N: Neutral.
+* WA: Weakly Against.
+* SA: Strongly Against.
+
+<table>
+<tr>
+<th>Poll
+<th>SF
+<th>WF
+<th>N
+<th>WA
+<th>SA
+<th>Outcome
+
+<tr>
+<td>
+Poll 1: Send "[[P3391R0]] constexpr std::format" to Library Working Group for C++29.
+<td>15
+<td>5
+<td>2
+<td>0
+<td>0
+<td>Strong consensus in favor
+
+
+
+</table>
+
+All the polls have consensus in favor and will be forwarded to LWG for C++29.
+
+# Selected Poll Comments # {#poll-comments}
+
+For some of the comments, small parts were removed to anonymize.
+
+
+## Poll 1: Send "[[P3391R0]] constexpr std::format" to Library Working Group for C++29.
+
+> This will help with improving error messages.
+>
+> — Strongly Favor
+
+> This, along,with P2758, seem like critical pieces of the vision we are being sold for reflection.
+>
+> — Weakly Favor
+
+> I would be in favour of a solution that would support all types.
+>  
+> — Neutral
+
+
+<pre class=biblio>
+{
+  "P3712R0": {
+    "title": "2025-05 Library Evolution Polls",
+    "authors": [
+      "Inbal Levi",
+      "Fabio Fracassi",
+      "Ben Craig",
+      "Billy Baker",
+      "Nevin Liber",
+      "Corentin Jabot"
+    ],
+    "href": "https://wg21.link/P3712r0",
+    "date": "19 May 2025"
+  }
+}
+</pre>
