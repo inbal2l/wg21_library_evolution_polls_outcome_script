@@ -5,7 +5,7 @@ Revision: 0
 Status: P
 Group: WG21
 
-Editor: Inbal Levi - Library Evolution Chair, MPGC Services LTD, sinbal2l@gmail.com
+Editor: Inbal Levi - Library Evolution Chair, Microsoft LTD, sinbal2l@gmail.com
 Editor: Fabio Fracassi - Library Evolution Assistant Chair, CODE University of Applied Sciences, fabio@fracassi.de
 Editor: Andreas Weis - Library Evolution Assistant Chair, ekxide IO GmbH, cpp@andreas-weis.net
 Editor: Billy Baker - Library Evolution Incubator Chair, NVIDIA, billy.baker.cpp@gmail.com
@@ -29,7 +29,7 @@ Default Biblio Display: direct
 In 2025-07, the C++ Library Evolution group conducted a series of electronic decision polls [[P3799R0]].
 This paper provides the results of those polls and summarizes the results.
 
-In total, XX people participated in the polls.
+In total, 15 people participated in the polls.
 Thank you to everyone who participated, and to the papers' authors for all their hard work!
 
 # Poll Outcomes # {#poll-outcomes}
@@ -53,27 +53,27 @@ Thank you to everyone who participated, and to the papers' authors for all their
 <tr>
 <td>
 Poll 1: Send "[[P3125R5]] constexpr pointer tagging" to Library Working Group for C++29.
-<td>-
-<td>-
-<td>-
-<td>-
-<td>-
-<td>(Unknown)
+<td>10
+<td>2
+<td>1
+<td>0
+<td>1
+<td>Consensus in favor
 
 <tr>
 <td>
 Poll 2: Send "[[P3778R0]] Fix for type_order template definition" to Library Working Group as a DR (fix) for C++26.
-<td>-
-<td>-
-<td>-
-<td>-
-<td>-
-<td>(Unknown)
+<td>13
+<td>1
+<td>1
+<td>0
+<td>0
+<td>Consensus in favor
 
 
 </table>
 
-All the polls have consensus in favor and will be forwarded to LWG for C++29.
+All the polls have consensus in favor and the papers will be forwarded to LWG.
 
 # Selected Poll Comments # {#poll-comments}
 
@@ -82,48 +82,85 @@ For some of the comments, small parts were removed to anonymize.
 
 ## Poll 1: Send "[[P3125R5]] constexpr pointer tagging" to Library Working Group for C++29.
 
-> 
+> This helps prevent users from invoking UB by breaking pointer provenance rules when doing widely used pointer tagging techniques.
 >
 > — Strongly Favor
 
+> A useful facility to legitimize a very common programming technique.
+>
+> — Strongly Favor
+
+> This feature covers a niche for which user code exists but is probably bug-prone in many cases. My only worry was how the API managed the case of user code requesting more bits than can be provided and I can see from the wording part that this is handled reasonably.
+>
+> — Strongly Favor
+
+> Editorial Comments:
+> The declaration (in 4 places):
 > 
+> ```
+> static constexpr bits_available = see below;
+> ```
+>
+> Is missing a type.  There should be a `unsigned` after the `constexpr` (and maybe also an `inline`, too?).
+> Also, the *Returns:* clause for `from_tagged` says "an object `dp` of type `pointer_tag_type`" instead of "type `pointer_tag_pair`".  The return type need not be repeated in the text at all; it would be sufficient to say "An object `dp` such that:"
+>
+> — Strongly Favor
+
+> This feature covers a niche for which user code exists but is probably bug-prone in many cases. My only worry was how the API managed the case of user code requesting more bits than can be provided and I can see from the wording part that this is handled reasonably.
+>
+> — Strongly Favor
+
+> It's standardizing existing practice.
 >
 > — Weakly Favor
 
-> 
+> It is already used and have reasonable use cases. Standardizing it seems to be beneficial.
+>
+> — Weakly Favor
+
+> It's unclear to me how this facility makes constexpr atomic<std::shared_ptr<T>> work. Lacking that understanding, the motivation for standardizing this facility is unclear to me.
 >  
 > — Neutral
 
-> 
+> While I do think the proposal is well motivated and pointer tagging is extremely useful, this iteration of the design could be improved without too much effort to support forward declarations, opaque ptrs, nested tagged pointers and other pointer-like types, by adding a trait to extract/construct a tagged pointer from user-defined types.
+> Such as trait would only need the following additional members
+> template <typename T> struct pointer_tag_traits<T *> {
+>    static inline void *get_as_void(T *P) { return P; }
+>    static inline T * get_from_void(void *P) { return static_cast<T *>(P); }
+>    static constexpr int bits_available = log2(alignof(T));
+> };
 >
-> — Weakly Against
-
-> 
+> Furthermore, that the traits is specialized for T rather that T* makes any improvement impossible and it is the wrong mental model (a tagged pointer is an optimization of pair, not a pointer to T).
+> Finally, we should specify that the tag uses the high-most available low bits (so that any unused remaining low bits are still accessible for composition and nesting.
+> Failing to make this type composable/customisable will prevent adoption in existing code base, as everything described therein is standard practice.
+>
 >
 > — Strongly Against
+>
+> Editor's Note: The feature is targeting C++29, the commenter proposed to bring a follow-up paper for the design changes requested.
 
 
 ## Poll 2: Send "[[P3778R0]] Fix for type_order template definition" to Library Working Group as a DR (fix) for C++26.
 
-> 
+> Seems like a reasonable approach to a real and pressing problem. Thanks!
 >
 > — Strongly Favor
 
-> 
+> We can fix strong_ordering later. This paper a strict improvement over the status quo.
+>
+> — Strongly Favor
+
+> This is an obviously correct fix to make a badly needed feature work.
+>
+> — Strongly Favor
+
+> Bugfix to make the feature implementable. The proposed resolution seems reasonable.
 >
 > — Weakly Favor
 
-> 
+> Implementations seem to be able to handle it, at least Clang. It seems unnecessary.
 >  
 > — Neutral
-
-> 
->
-> — Weakly Against
-
-> 
->
-> — Strongly Against
 
 
 <pre class=biblio>
@@ -140,6 +177,14 @@ For some of the comments, small parts were removed to anonymize.
     ],
     "href": "https://wg21.link/P3799r0",
     "date": "15 July 2025"
+  },
+  "P3125R5": {
+    "title": "constexpr pointer tagging",
+    "authors": [
+      "Hana Dusíková"
+    ],
+    "href": "https://wg21.link/P3125r5",
+    "date": "06 October 2025"
   }
 }
 </pre>
