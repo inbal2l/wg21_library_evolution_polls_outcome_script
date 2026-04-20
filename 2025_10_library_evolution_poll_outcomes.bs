@@ -1,5 +1,5 @@
 <pre class='metadata'>
-Title: 2025-07 Library Evolution Poll Outcomes
+Title: 2025-10 Library Evolution Poll Outcomes
 Shortname: P3873
 Revision: 0
 Status: P
@@ -14,7 +14,7 @@ Editor: Corentin Jabot - Library Mailing List Review Manager, corentin.jabot@gma
 
 Audience: WG21
 
-URL: https://wg21.link/P3800
+URL: https://wg21.link/P3873
 !Source: <a href="https://github.com/inbal2l/wg21_library_evolution_polls_outcome_script/blob/main/2025_10_library_evolution_poll_outcomes.bs">GitHub</a>
 Metadata Order: Editor, Source, Project, Audience
 Markup Shorthands: markdown yes
@@ -29,7 +29,7 @@ Default Biblio Display: direct
 In 2025-10, the C++ Library Evolution group conducted a series of electronic decision polls [[P3872R0]].
 This paper provides the results of those polls and summarizes the results.
 
-In total, XX people participated in the polls.
+In total, 9 people participated in the polls.
 Thank you to everyone who participated, and to the papers' authors for all their hard work!
 
 # Poll Outcomes # {#poll-outcomes}
@@ -52,23 +52,23 @@ Thank you to everyone who participated, and to the papers' authors for all their
 
 <tr>
 <td>
-Poll 1: Send "[[P3125R5]] constexpr pointer tagging" to Library Working Group for C++29.
-<td>-
-<td>-
-<td>-
-<td>-
-<td>-
-<td>(Unknown)
+Poll 1: Send "[[P3774R1]] Rename std::nontype, and make it broadly useful" to Library Working Group as a DR (fix) for C++26.
+<td>3
+<td>5
+<td>0
+<td>0
+<td>1
+<td>Consensus in favor
 
 <tr>
 <td>
-Poll 2: Send "[[P3778R0]] Fix for type_order template definition" to Library Working Group as a DR (fix) for C++26.
-<td>-
-<td>-
-<td>-
-<td>-
-<td>-
-<td>(Unknown)
+Poll 2: Send "[[3798R1]] The unexpected in std::expected" to Library Working Group for C++29.
+<td>6
+<td>2
+<td>0
+<td>0
+<td>0
+<td>Strong Consensus in favor
 
 
 </table>
@@ -80,50 +80,39 @@ All the polls have consensus in favor and the papers will be forwarded to LWG.
 For some of the comments, small parts were removed to anonymize.
 
 
-## Poll 1: Send "[[P3125R5]] constexpr pointer tagging" to Library Working Group for C++29.
+## Poll 1: Send "[[P3774R1]] Rename std::nontype, and make it broadly useful" to Library Working Group as a DR (fix) for C++26.
 
-> 
+> I fully agree with this paper, the new names are a considerable improvement.
 >
 > — Strongly Favor
 
-> 
+> Getting away from "nontype" name is important. Choice of new name is not optimal but acceptable.
 >
 > — Weakly Favor
 
-> 
->  
-> — Neutral
-
-> 
+> Positive names are better than negative names (things with not, non, etc.).
 >
-> — Weakly Against
+> — Weakly Favor
 
-> 
+> Reconsider R0 / P3843R0.
 >
 > — Strongly Against
 
 
-## Poll 2: Send "[[P3778R0]] Fix for type_order template definition" to Library Working Group as a DR (fix) for C++26.
+## Poll 2: Send "[[P3798R1]] The unexpected in std::expected" to Library Working Group for C++29.
 
-> 
+> Seems very appropriate for reasons of symmetry. I looks much more like an oversight or defect, so I would also suggest it for C++26.
 >
 > — Strongly Favor
 
-> 
+
+> I'm all for more expressive code. Minimal interfaces are not easy to teach, to discover and to read.
+>
+> — Strongly Favor
+
+> This is a simple enough addition to improve usability. While I don't see a strong need for this change, there is no reason not to do this.
 >
 > — Weakly Favor
-
-> 
->  
-> — Neutral
-
-> 
->
-> — Weakly Against
-
-> 
->
-> — Strongly Against
 
 
 <pre class=biblio>
