@@ -27,7 +27,7 @@ Default Biblio Display: direct
 In 2026-05, the C++ Library Evolution group conducted an electronic poll [[P4225R0]].
 This paper provides the results of this poll and summarizes the responses.
 
-In total, XX people participated in the polls.
+In total, 18 people participated in the polls.
 Thank you to everyone who participated, and to the papers' authors for all their hard work!
 
 # Poll Outcomes # {#poll-outcomes}
@@ -51,44 +51,42 @@ Thank you to everyone who participated, and to the papers' authors for all their
 <tr>
 <td>
 Poll 1: Forward "P3791R0: constexpr (deterministic) random" to LWG for C++29.
-<td>
-<td>
-<td>
-<td>
-<td>
-<td>TBD
+<td>9
+<td>7
+<td>0
+<td>0
+<td>1
+<td>Consensus in favor
 
 
 </table>
 
-All the polls besides Poll 1 and Poll 8 have consensus in favor, and the papers will be forwarded to LWG.
+The poll had consensus in favor, and the paper will be forwarded to LWG for C++29.
 
 # Selected Poll Comments # {#poll-comments}
 
 For some of the comments, small parts were removed to anonymize.
 
 
-## Poll 1: Forward 
+## Poll 1: Forward "P3791R0: constexpr (deterministic) random" to LWG for C++29.
   "P3791R0: constexpr (deterministic) random"
   to LWG for C++29.
 
-> 
+> Pseudorandom number generation is just another kind of math function. It's perfectly deterministic as long as the seed is deterministic. There's no reason to exclude these functions from constexpr-ness just because it "seems weird" to compute them at compile time. Adding constexpr makes it possible to test all kinds of things at compile time, and also enables new use cases. I found a use case for this just like week.
 >
 > — Strongly Favor
 
-> 
+> The entire point of the deterministic RNGs is that they are deterministic - there is no reason for them to not be constexpr, by doing so we just add yet another reason for people to steer clear of the stdlib random number generators. 
+>
+> — Strongly Favor
+
+> Enabling pseudo-random number generation in constant expressions is a valuable addition for compile-time data generation and static shuffles. Ensuring this behavior is deterministic across compiler implementations is the right approach to make it reliable.
 >
 > — Weakly Favor
 
-> 
->  
-> — Neutral
-
-> 
->
-> — Weakly Against
-
-> 
+> The paper suggests that all distributions also become deterministic (or the paper title is misleading).
+> The thing is the distributions are not deterministic by nature. We can argue whether it's a good or bad thing but they are what they are. We allow returning different results from run to run and also allow different results between scalar distributions and vectorized ones (gotten by calling `std::generate_random`). Thus, it would also mean that the results between compile-time executed distributions and runtime executed distributions would be different. I can see that minutes reflect that distributions topic was also touched during telecon.
+> So, overall, I think I want to at least see any design rationale behind `constexpr` distributions and some analysis on whether having different results for compile-time vs run-time execution is fine. For now, the paper, as it stands, does not discuss that. I am against to blindly applying `constexpr` everywhere without brining the design rationale first. It's worth noting that I totally support fine to make generators, not distributions, constexpr, assuming it's implementable (which seems, it is).
 >
 > — Strongly Against
 
